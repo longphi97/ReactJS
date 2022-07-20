@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <h1>Lesson 5</h1>
+    <input id="1" type="number" placeholder="..."/>
+    <button onclick="handlesubmit()">Button 1</button>
+    <input id="2" type="number" placeholder="..."/>
+    <button onclick="handlesubmit2()">Button 2</button>
+    <body>
+        <script>
+            function handlesubmit() {
+                var n = document.getElementById("1").value;
+                for(var i = 1; i<= n; i++) {
+                    document.write(`${i} `)
+                }
+            }
+            function handlesubmit2() {
+                var i =2 ;
+                var kt,j;
+                var n = document.getElementById("2").value;
+                while (i < n) {
+                    kt = 1;
+                    if (i != 0 && i != 1) {
+                        j = 2;
+                        while(j <= i/2) {
+                            if(i%j == 0) {
+                            kt = 0;
+                            break;
+                        }
+                        j++;
+                    }
+                } else {
+                    kt = 0;
+                    }
+                if(kt == 1) {
+                    document.write(`${i} `);
+                }
+                    i++;
+                }
+                return 0;
+            }
+        </script>
+    </body>
+</html>
